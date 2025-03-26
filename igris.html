@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anime</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>IGRIS</h1>
-<p>Igris is a character from solo leveling</p>
+    <section class="container mx-auto mt-8">
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Book Your Tickets</h2>
+            <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                </div>
+                <div class="mb-4">
+                    <label for="tickets" class="block text-gray-700">Number of Tickets</label>
+                    <input type="number" id="tickets" name="tickets" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+            </form>
+        </div>
+        <div>
+            <h2 class="text-2xl font-semibold mb-4">Payment and Contact Information</h2>
+            <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="payment" class="block text-gray-700">Payment Method</label>
+                    <select id="payment" name="payment" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Bank Transfer</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+            </form>
+        </div>
+    </section>
+    
 </body>
 </html>
