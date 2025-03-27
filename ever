@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Mwangi's</title>
+    <title>Everton</title>
 </head>
+
 <body>
-    <p>This Louis Mwangi's Home Page</p>
+    <h1>Welcome to Group 3's Website</h1>
     
+    <h1>Hi it's Eddy</h1>
+    <p> My home page</p>
 </body>
+
 </html>

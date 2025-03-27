@@ -1,3 +1,4 @@
+
 /* General body styling */
 body {
     font-family: 'Arial', sans-serif;
@@ -124,3 +125,43 @@ footer a {
 footer a:hover {
     color: #2563eb;
 }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb; /* Light background */
+    color: #374151; /* Dark text color */
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;h
+}
+
+.upcoming-events {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for events section */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-card {
+    border: 1px solid #e5e7eb; /* Light border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.event-card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.register-button {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded; /* Tailwind utility classes */
+}
+
+.register-button:hover {
+    @apply bg-blue-600; /* Darker blue on hover */
+}
+
