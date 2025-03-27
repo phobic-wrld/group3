@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Manager - Upcoming Events</title>
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6af9b2de9a.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: url('img/index.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-    </style>
 </head>
 <body class="bg-gray-900 text-white">
+
+      <div id="preloader">
+        <div id="preloader-logo">DEATHROW RECORDS</div>
+    </div>
     <header class="bg-gray-600 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">DEATHROW RECORDS</h1>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="index.html" class="hover:underline">Home</a></li>
-                    <li><a href="about.html" class="hover:underline">About</a></li>
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                <!-- Toggle Button -->
+                <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <ul id="menu" class="hidden flex-col space-y-2 bg-gray-700 p-4 rounded-lg shadow-lg md:flex md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:p-0 md:shadow-none">
+                    <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Home</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">About</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,17 +33,8 @@
 
     <main class="container mx-auto mt-8">
         <div class="flex justify-between items-center mb-4">
-            <h2 class="text-2xl font-semibold">Upcoming Events</h2>
-            <div class="mb-4">
-                <select id="event" name="event" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 bg-gray-700 text-white">
-                    <option value="king-von-grandson">V.roy</option>
-                    <option value="king-von-otf">#Grandson</option>
-                    <option value="king-von">King Von</option>
-                    <option value="Nardo Wick">Nardo Wick</option>
-                    <option value="SKENG">SKENG</option>
-                    <option value="LIL DURK">LIL DURK</option>
-                </select>
-            </div>
+            <h2 class="text-2xl font-semibold ml-7">Upcoming Events</h2>
+           
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
@@ -96,7 +90,6 @@
     </main>
 
     <footer class="bg-blue-600 text-white text-center p-4 mt-8">
-        <p>&copy; 2024 Event Manager. All rights reserved.</p>
         <p>Email: <a href="mailto:info@eventmanager.com" class="underline">info@eventmanager.com</a></p>
         <div class="mt-4">
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-facebook"></i>Facebook</i></a>
@@ -104,9 +97,38 @@
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-instagram"></i>Instagram</a>
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
         </div>
+        <br>
         <p>&copy; 2024 Deathrow Records. All rights reserved.</p>
     </footer>
-
-    <script src="js/scripts.js"></script>
+    <script>
+        // Preloader functionality
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('hidden'); // Add 'hidden' class to fade out and hide the preloader
+            }
+        });
+    
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const menuItems = menu.querySelectorAll('a'); // Select all menu links
+    
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden'); // Show or hide the menu
+            menuIcon.classList.toggle('fa-bars'); // Toggle between hamburger and X icon
+            menuIcon.classList.toggle('fa-times');
+        });
+    
+        // Hide the menu when a menu item is clicked
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.add('hidden'); // Hide the menu
+                menuIcon.classList.add('fa-bars'); // Reset to hamburger icon
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 </html>

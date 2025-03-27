@@ -11,19 +11,27 @@
 </head>
 
 <body class="bg-gray-900">
-    <header class="bg-gray-800 bg-opacity-80 text-white p-4">
+    
+    <div id="preloader">
+        <div id="preloader-logo">DEATHROW RECORDS</div>
+    </div>
+    <header class="bg-gray-600 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">DEATHROW RECORDS</h1>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="index.html" class="hover:underline">Home</a></li>
-                    <li><a href="about.html" class="hover:underline">About</a></li>
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                <!-- Toggle Button -->
+                <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <ul id="menu" class="hidden flex-col space-y-2 bg-gray-700 p-4 rounded-lg shadow-lg md:flex md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:p-0 md:shadow-none">
+                    <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Home</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">About</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main class="container mx-auto mt-12">
         <div class="content-box max-w-2xl mx-auto p-6 shadow-lg">
             <h2 class="text-3xl font-semibold text-center mb-4">About DEATHROW</h2>
@@ -46,16 +54,50 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center p-4 mt-12" id="social-icons">
-        
+    <footer class="bg-blue-600 text-white text-center p-4 mt-8">
         <div class="mt-4">
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-facebook"></i>Facebook</i></a>
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-twitter"></i>Twitter</a>
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-instagram"></i>Instagram</a>
             <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
         </div>
+        <br>
         <p>&copy; 2024 Deathrow Records. All rights reserved.</p>
-    </footer>
+    </footer
 </body>
+
+
+
+
+<script>
+    // Preloader functionality
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.classList.add('hidden'); // Add 'hidden' class to fade out and hide the preloader
+        }
+    });
+
+    // Menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const menuItems = menu.querySelectorAll('a'); // Select all menu links
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden'); // Show or hide the menu
+        menuIcon.classList.toggle('fa-bars'); // Toggle between hamburger and X icon
+        menuIcon.classList.toggle('fa-times');
+    });
+
+    // Hide the menu when a menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.add('hidden'); // Hide the menu
+            menuIcon.classList.add('fa-bars'); // Reset to hamburger icon
+            menuIcon.classList.remove('fa-times');
+        });
+    });
+</script>
 
 </html>

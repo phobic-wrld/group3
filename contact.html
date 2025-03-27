@@ -18,31 +18,113 @@
         /* Glassmorphic form box */
         .form-container {
             background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #1f2937, #4b5563);
+            color: #f9fafb;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 16px;
+            }
+
+            footer {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-container {
+                width: 90%;
+            }
+        }
+
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a202c; /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #preloader-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            animation: fadeInOut 1.5s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        /* Hide preloader after transition */
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
 
 <body>
-    <header class="bg-gray-800 bg-opacity-90 text-white p-4">
+    
+    <div id="preloader">
+        <div id="preloader-logo">DEATHROW RECORDS</div>
+    </div>
+    <header class="bg-gray-800 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">DEATHROW RECORDS</h1>
+            <a href="index.html">
+                <h1 class="text-3xl font-bold">DEATHROW RECORDS</h1>
+            </a>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="index.html" class="hover:underline">Home</a></li>
-                    <li><a href="about.html" class="hover:underline">About</a></li>
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                <!-- Toggle Button -->
+                <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <ul id="menu" class="hidden flex-col space-y-2 bg-gray-700 p-4 rounded-lg shadow-lg md:flex md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:p-0 md:shadow-none">
+                    <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Home</a></li>
+                    <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">About</a></li>
+                    <li><a href="contact.html" class="block px-4 py-2 hover:bg-gray-800 rounded-md">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="flex justify-center items-center min-h-screen">
+    <main class="flex justify-center items-center min-h-screen px-4">
         <div class="form-container w-full max-w-lg p-8">
-            <h2 class="text-3xl font-semibold text-center text-white mb-6">Get in Touch</h2>
+            <h2 class="text-3xl font-semibold text-center text-white mb-6">Contact Us</h2>
             <form action="#" method="POST">
                 <div class="mb-4">
                     <label for="name" class="block text-white font-semibold">Name</label>
@@ -61,14 +143,46 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center p-4 mt-12">
-        <div class="mt-4">
-            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-facebook"></i>Facebook</i></a>
-            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-twitter"></i>Twitter</a>
-            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-instagram"></i>Instagram</a>
-            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+    <footer class="bg-blue-600 text-white text-center p-4 mt-8">
+        <div class="mt-4 flex flex-wrap justify-center space-x-4">
+            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" class="text-white mx-2 hover:underline"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
         </div>
+        <br>
         <p>&copy; 2024 Deathrow Records. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Preloader functionality
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('hidden'); // Add 'hidden' class to fade out and hide the preloader
+            }
+        });
+    
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const menuItems = menu.querySelectorAll('a'); // Select all menu links
+    
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden'); // Show or hide the menu
+            menuIcon.classList.toggle('fa-bars'); // Toggle between hamburger and X icon
+            menuIcon.classList.toggle('fa-times');
+        });
+    
+        // Hide the menu when a menu item is clicked
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.add('hidden'); // Hide the menu
+                menuIcon.classList.add('fa-bars'); // Reset to hamburger icon
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+    </script>
 </body>
 </html>
