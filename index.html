@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager - Upcoming Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-gray-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold">DEATHROW RECORDS</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container mx-auto mt-8">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">Upcoming Events</h2>
+        <div class="mb-4">
+            <select id="event" name="event"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+                <option value="king-von-grandson">V.roy</option>
+                <option value="king-von-otf">#Grandson</option>
+                <option value="king-von">King Von</option>
+                <option value="Nardo Wick">Nardo Wick</option>
+                <option value="SKENG">SKENG</option>
+                <option value="LIL DURK">LIL DURK</option>
+            </select>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/king von.jpg" alt="Event 1" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">King Von #Grandson</h3>
+            <p class="text-gray-700">Date: February 28, 2025</p>
+            <p class="text-gray-700">Location: Madison Square Garden, Illinois</p>
+            <p class="text-gray-700">Ticket Prices: $50 - $200</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/levon james.jpg" alt="Event 2" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">King Von #OTF</h3>
+            <p class="text-gray-700">Date: February 12, 2025</p>
+            <p class="text-gray-700">Location: Madison Square Garden, Illinois</p>
+            <p class="text-gray-700">Ticket Prices: $50 - $180</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/otf.jpg" alt="Event 3" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">King Von</h3>
+            <p class="text-gray-700">Date: February 17, 2025</p>
+            <p class="text-gray-700">Location: Madison Square Garden, Illinois</p>
+            <p class="text-gray-700">Ticket Prices: $50 - $250</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/NARDO.jpg" alt="Event 4" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">Nardo Wick</h3>
+            <p class="text-gray-700">Date: March 5, 2025</p>
+            <p class="text-gray-700">Location: Staples Center, California</p>
+            <p class="text-gray-700">Ticket Prices: $60 - $220</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/lil durk.jpg" alt="Event 5" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">LIL Durk</h3>
+            <p class="text-gray-700">Date: April 10, 2025</p>
+            <p class="text-gray-700">Location: O2 Arena, Chiraq</p>
+            <p class="text-gray-700">Ticket Prices: $70 - $300</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <img src="/img/skeng.webp" alt="Event 6" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-xl font-bold mt-4">skeng</h3>
+            <p class="text-gray-700">Date: May 15, 2025</p>
+            <p class="text-gray-700">Location: Rogers Centre, Toronto</p>
+            <p class="text-gray-700">Ticket Prices: $80 - $350</p>
+            <a href="#" class="mt-2 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy
+                Tickets</a>
+        </div>
+    </div>
+</main>
+
+<section class="container mx-auto mt-8">
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Book Your Tickets</h2>
+        <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+            <div class="mb-4">
+                <label for="tickets" class="block text-gray-700">Number of Tickets</label>
+                <input type="number" id="tickets" name="tickets"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+        </form>
+    </div>
+    <div>
+        <h2 class="text-2xl font-semibold mb-4">Payment Form</h2>
+        <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="payment" class="block text-gray-700">Payment Method</label>
+                <select id="payment" name="payment"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="bg-blue-600 text-white text-center p-4 mt-8">
+    <p>&copy; 2024 Event Manager. All rights reserved.</p>
+    <p>Email: <a href="mailto:info@eventmanager.com" class="underline">info@eventmanager.com</a></p>
+    <div class="mt-4">
+        <a href="#" class="text-white mx-2 hover:underline">Facebook</a>
+        <a href="#" class="text-white mx-2 hover:underline">Twitter</a>
+        <a href="#" class="text-white mx-2 hover:underline">Instagram</a>
+        <a href="#" class="text-white mx-2 hover:underline">LinkedIn</a>
+    </div>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+
+</html>
