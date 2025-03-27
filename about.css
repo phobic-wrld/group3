@@ -53,6 +53,26 @@ a:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
+
+
+
+#social-icons{
+    margin-top: 30px;
+
+}
+#social-icons a{
+    margin: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4b5563;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+#social-icons a:hover{
+    color: #4b5563;
+    transform: translateY(-6px);
+}
 /* Responsive design */
 @media (max-width: 768px) {
     h1 {

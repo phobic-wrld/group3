@@ -165,3 +165,27 @@ h1, h2, h3 {
     @apply bg-blue-600; /* Darker blue on hover */
 }
 
+
+.bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300{
+    color: grey;
+}
+
+#social-icons{
+    margin-top: 30px;
+
+}
+#social-icons a{
+    margin: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4b5563;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+#social-icons a:hover{
+    color: #4b5563;
+    transform: translateY(-6px);
+
+
+}
